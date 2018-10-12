@@ -1,0 +1,17 @@
+<div class="card-wrapper" (click)="navigate(data.id)">
+ 	<img 
+		[src]="data.images[data.images.length - 1].url"
+		[alt]="data.name" />
+	<p>{{data.name}}</p>
+	<div 
+		class="progress-bar"
+		>
+		<div 
+		[appPopularity]="data.popularity"
+		[style.width]="data.popularity+'%'"
+		class="progress">
+		</div>
+	</div>
+	{{data.popularity}}
+	<a *ngIf="data.external_urls" href="{{data.external_urls.spotify}}" target="_new">Open in Spotify</a> 
+</div>

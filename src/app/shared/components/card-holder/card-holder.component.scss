@@ -1,0 +1,11 @@
+div.card-holder {
+	app-card {
+		box-sizing: border-box;
+		&:nth-child(odd) {
+			background: lightgray;
+		}
+		&:nth-child(even) {
+			background: whitesmoke;
+		}
+	}
+}

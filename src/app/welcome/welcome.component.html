@@ -1,0 +1,22 @@
+<div>
+	<h1>Welcome</h1>
+	<div class="search-wrapper">
+		<input
+			placeholder="Search artists name"
+			type="text"
+			class="search" />
+	</div>
+	<div class="list-wrapper">
+		<app-card-holder 
+			title="My Top Artists"
+			[dataSet]="topArtists">
+		</app-card-holder>
+	</div>
+	<div class="list-wrapper">
+		<app-card-holder 
+			title="My Playlists"
+			[dataSet]="myPlaylists"
+			[canNavigate]="!!false">
+		</app-card-holder>
+	</div>
+</div>

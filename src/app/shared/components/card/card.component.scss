@@ -1,0 +1,36 @@
+:host {
+	display: inline-block;
+	width: 20%;
+}
+div.card-wrapper {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	border: 1px solid gray;
+	display: inline-block;
+	text-alight: center;
+	> img {
+		width: inherit;
+	}
+	div.progress-bar {
+		width: inherit;
+		height: 8px;
+		border-radius: 5px;
+		border: 1px solid gray;
+		div.progress {
+			border-radius: inherit;
+			height: inherit;
+			background-color: orange;
+			&.popularity-high {
+				background-color: green;
+			}
+		}
+	}
+
+	a {
+		color: green;
+		margin-top: 10px;
+		display: inline-block;
+	}
+
+}

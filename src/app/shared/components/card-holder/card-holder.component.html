@@ -1,0 +1,10 @@
+<div class="card-holder">
+	<h2>{{title}}</h2>
+	<div class="cards">
+		<app-card 
+			*ngFor="let data of dataSet"
+			[canNavigate]="canNavigate"
+			[data]="data">
+		</app-card>
+	</div>
+</div>

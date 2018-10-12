@@ -1,0 +1,22 @@
+<p *ngIf="!artist">Loading...</p>
+<div 
+	class="wrapper"
+	*ngIf="artist">
+	<img 
+		class="artist-pic"
+		[src]="artist.images[2].url" 
+		[alt]="artist.name">
+		<p>{{artist.name}}</p>
+		<p>Genres: {{artist.genres}}</p>
+</div>
+
+<div class="albums-list">
+	<ul>
+		<li *ngFor="let album of albums">
+			<img 
+				[src]="album.images[2].url"
+				[alt]="album.name">
+			<p>{{album.name}} ({{album.total_tracks}} songs)</p>
+		</li>
+	</ul>
+</div>
