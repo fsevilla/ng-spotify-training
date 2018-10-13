@@ -1,10 +1,20 @@
 <div>
 	<h1>Welcome</h1>
 	<div class="search-wrapper">
-		<input
-			placeholder="Search artists name"
-			type="text"
-			class="search" />
+		<form 
+		[formGroup]="mySearch"
+		(ngSubmit)="onSearch()">
+			<input
+				formControlName="search"
+				placeholder="Search artists name"
+				type="text"
+				class="search" />
+			<input 
+				formControlName="range"
+				type="number">
+			<button type="submit">Search</button>
+		</form>
+		My Form: {{mySearch.valid}}
 	</div>
 	<div class="list-wrapper">
 		<app-card-holder 
